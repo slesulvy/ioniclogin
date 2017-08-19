@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>markerModel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list inset>
+         <form (submit)="addMap()">
+            <ion-item>
+                <ion-label floating>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="mapData.name" name="name"></ion-input>
+                <span> Error </span>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>latitude</ion-label>
+                <ion-input type="text" [(ngModel)]="mapData.latitude" name="latitude"></ion-input>
+                <span class="validationError"></span>
+            </ion-item>
+                <ion-item>
+                <ion-label floating>longitude</ion-label>
+                <ion-input type="text" [(ngModel)]="mapData.longitude" name="longitude"></ion-input>
+                <span class="validationError"></span>
+            </ion-item>
+            <button ion-button block>
+                <ion-icon name="add"></ion-icon>
+                Add
+            </button>
+            <button ion-button block (click)="closeModal()">Close Modal</button>
+        </form> 
+        <!-- <input id="journey_from" name="journey_from" type="text" placeholder="Start from location" [(ngModel)]="fromValue"> -->
+    </ion-list>
+  
+</ion-content>

@@ -1,17 +1,56 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      <p>Welcome to my app!
+        <span id="btn-logout">
+            <button ion-button clear (click)="logout()">
+              <ion-icon name="log-out"></ion-icon>
+            </button>
+            <!-- <a (click)='editMarker()'><span>edit</span></a> -->
+            <button ion-button right (click)="addNewMarkerModal()">Add new Marker</button> 
+        </span>
+
+      </p>
+
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-label>Search</ion-label>
+
+  <ion-fab right bottom>
+    <button ion-fab class="fab-map" (click)="getDirection()">
+            <ion-icon name="navigate"></ion-icon>
+        </button>
+  </ion-fab>
+
+  <div #map id="map">
+
+  </div>
+
+   <div id="inputwrap">
+    <ion-item>
+      <ion-label >Start</ion-label>
+      <ion-input  type="text" [(ngModel)]="start"></ion-input>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-label >end</ion-label>
+      <ion-input type="text" [(ngModel)]="end"></ion-input>
+    </ion-item>
+  </div> 
+
+  <!-- <div id="inputwrap">
+      <input id="journey_from" name="journey_from" type="text" placeholder="Start from location" [(ngModel)]="fromValue">
+      <input id="journey_to" name="journey_to" type="text" placeholder="Enter destination location" [(ngModel)]="toValue">
+  </div> -->
+
+   <!-- <p>From</p>
+  <input id="journey_from" name="journey_from" type="text" placeholder="Start from location" [(ngModel)]="fromValue">
+  <p>To</p>
+  <input id="journey_to" name="journey_to" type="text" placeholder="Enter destination location" [(ngModel)]="toValue">  -->
+
+
 </ion-content>

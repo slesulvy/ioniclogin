@@ -1,0 +1,23 @@
+{
+  "login": {
+    "email": "admin",
+    "password": "admin"
+  },
+  "markers": [
+    {
+      "latitude": 11.544405,
+      "longitude": 104.913092,
+      "name": "Park Cafe"
+    },
+    {
+      "latitude": 11.54328,
+      "longitude": 104.916364,
+      "name": "Toul Tampong"
+    },
+    {
+      "latitude": 11.542555,
+      "longitude": 104.91542,
+      "name": "IG Moblie Shop"
+    }
+  ]
+}
